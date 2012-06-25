@@ -1,0 +1,11 @@
+grande
+pequena
+gorda
+magra
+alta
+dedicada
+engraçada
+cética
+irônica
+desajeitada
+
