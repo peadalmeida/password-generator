@@ -1,0 +1,11 @@
+criança
+pessoa
+vítima
+criatura
+sentinela
+testemunha
+mosca
+faca
+cadeira
+impressora
+
