@@ -1,0 +1,10 @@
+grande
+pequeno
+redondo
+gordo
+magro
+alto
+organizado
+feliz
+triste
+relaxado
