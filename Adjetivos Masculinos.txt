@@ -1,5 +1,5 @@
 grande
-pequeno
+feio
 redondo
 gordo
 magro
@@ -8,3 +8,14 @@ organizado
 feliz
 triste
 relaxado
+leal
+lindo
+forte
+obeso
+curioso
+quente
+leal
+calmo
+alegre
+burro
+retraido

@@ -3,9 +3,24 @@ pessoa
 vítima
 criatura
 sentinela
-testemunha
+mesa
 mosca
 faca
 cadeira
 impressora
+poeta
+pedra
+louça
+planta
+flor
+leoa
+lebre
+manga
+fruta
+caixa
+jarra
+laje
+barca
+cama
+pilha
 
