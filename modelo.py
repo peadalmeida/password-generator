@@ -46,8 +46,8 @@ class Senha:
         if genero == 'm':
             return random.choice(lista_sub_mas) + \
                     random.choice(lista_adj_mas) + \
-                    '{:03}'.format(random.choice(range(100)))
+                    '{:03}'.format(random.choice(range(101)))
         else:
             return random.choice(lista_sub_fem) + \
                     random.choice(lista_adj_fem) + \
-                    '{:03}'.format(random.choice(range(100)))
+                    '{:03}'.format(random.choice(range(101)))
