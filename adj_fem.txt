@@ -15,7 +15,6 @@ forte
 cheia
 velha
 preta
-verde
 lenta
 livre
 larga
@@ -25,3 +24,17 @@ fraca
 falsa
 unica
 cheia
+jovem
+calma
+burra
+brava
+firme
+mansa
+curta
+podre
+docil
+longa
+legal
+sonsa
+azeda
+otima
