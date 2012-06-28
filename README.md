@@ -1,7 +1,8 @@
 Password-Generator
 ==================
 
-<b>Trabalho de Linguagens de Programação I -</b> 
+<b>Trabalho de Linguagens de Programação I -
+
 <b>Grupo:</b> Pedro Augusto, Cássio Botaro, Mônica Faria.
 <b>Professor:</b> Bruno de Oliveira Schneider
 
