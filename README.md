@@ -4,7 +4,7 @@ Password-Generator
 <b>Trabalho de Linguagens de Programação I -
 
 Implementar um programa em Python que gere senhas aleatorias e faceis de memorizar utilizando substantivos, adjetivos e numeros
-de, no maximo, 3 (dois) digitos(0 a 100).
+de, no maximo, 3 (três) digitos(0 a 100).
 As senhas possuem tamanho fixo de 13 caracteres formatadas no seguinte padrão.
 
 -Substantivo + Adjetivo + Número aleatório
