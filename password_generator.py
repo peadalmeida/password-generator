@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter.messagebox import *
 import random
 import sys
-import new_io as man
+import new_io as nio
 
 '''Carrega substantivos e adjetivos oriundos de arquivos no momento
     em que módulo é importado.
@@ -10,11 +10,11 @@ import new_io as man
     Em caso de falha o aplicativo é abortado.
 '''
 try:
-    lista_sub_fem = man.extrai_conteudo('sub_fem.txt')
-    lista_sub_mas = man.extrai_conteudo('sub_mas.txt')
-    lista_adj_mas = man.extrai_conteudo('adj_mas.txt')
-    lista_adj_fem = man.extrai_conteudo('adj_fem.txt')
-    senhas_antigas = man.extrai_conteudo('senhas_antigas.txt')
+    lista_sub_fem = nio.extrai_conteudo('sub_fem.txt')
+    lista_sub_mas = nio.extrai_conteudo('sub_mas.txt')
+    lista_adj_mas = nio.extrai_conteudo('adj_mas.txt')
+    lista_adj_fem = nio.extrai_conteudo('adj_fem.txt')
+    senhas_antigas = nio.extrai_conteudo('senhas_antigas.txt')
 except Exception as exc:
     showwarning('Error!', exc)
     sys.exit(1)
@@ -48,13 +48,14 @@ e as devidas dimensões
 '''
 app = Tk()
 app.title("Gerador de Senhas")
-app.geometry('500x200+300+200')
+app.geometry('500x100+300+100')
 
 '''
 Inicializaçao do texto onde será exibida a senha.
 '''
 senha = StringVar()
-Label(app, textvariable=senha, font=("Helvetica", 30)).pack()
+Label(app, textvariable=senha, font=("Helvetica", 30), background='black',
+        foreground='green').pack()
 senha.set("Senha gerada aqui")
 
 
@@ -71,7 +72,7 @@ def nova_senha():
 
 def save_and_destroy():
     '''salva senhas antigas antes de destruir a aplicação'''
-    man.grava_conteudo(senhas_antigas, 'senhas_antigas.txt')
+    nio.grava_conteudo(senhas_antigas, 'senhas_antigas.txt')
     app.destroy()
 
 '''
