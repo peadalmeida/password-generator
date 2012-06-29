@@ -2,29 +2,19 @@ from tkinter import *
 from tkinter.messagebox import *
 import random
 import sys
-
-
-def extrai_conteudo(nome_arq):
-    '''
-       Abre um arquivo de nome nome_arq e retorna uma lista
-       com as linhas do arquivo.
-    '''
-    lista = []
-    with open(nome_arq, 'r') as arq:
-        for valor in arq:
-            lista.append(valor.strip())
-    return lista
-
+import new_io as man
 
 '''Carrega substantivos e adjetivos oriundos de arquivos no momento
     em que módulo é importado.
+    Também carregam as senhas já sorteadas.
     Em caso de falha o aplicativo é abortado.
 '''
 try:
-    lista_sub_fem = extrai_conteudo('sub_fem.txt')
-    lista_sub_mas = extrai_conteudo('sub_mas.txt')
-    lista_adj_mas = extrai_conteudo('adj_mas.txt')
-    lista_adj_fem = extrai_conteudo('adj_fem.txt')
+    lista_sub_fem = man.extrai_conteudo('sub_fem.txt')
+    lista_sub_mas = man.extrai_conteudo('sub_mas.txt')
+    lista_adj_mas = man.extrai_conteudo('adj_mas.txt')
+    lista_adj_fem = man.extrai_conteudo('adj_fem.txt')
+    senhas_antigas = man.extrai_conteudo('senhas_antigas.txt')
 except Exception as exc:
     showwarning('Error!', exc)
     sys.exit(1)
@@ -72,7 +62,17 @@ def nova_senha():
     '''
     Alteração do valor exibido com nova senha randômica.
     '''
-    senha.set(gera_senha())
+    nova_senha = gera_senha()
+    while nova_senha in senhas_antigas:
+        nova_senha = gera_senha()
+    senha.set(nova_senha)
+    senhas_antigas.append(nova_senha)
+
+
+def save_and_destroy():
+    '''salva senhas antigas antes de destruir a aplicação'''
+    man.grava_conteudo(senhas_antigas, 'senhas_antigas.txt')
+    app.destroy()
 
 '''
 Dois botoes, um para gerar a senha e um outro para sair do aplicativo.
@@ -80,7 +80,8 @@ Dois botoes, um para gerar a senha e um outro para sair do aplicativo.
 gera = Button(app, text="Gerar!", width=10, command=nova_senha)
 gera.pack(side='left', padx=10, pady=10)
 
-sair = Button(app, text="Sair", width=10, command=app.quit)
+sair = Button(app, text="Sair", width=10, command=save_and_destroy)
 sair.pack(side='right', padx=10, pady=10)
 
+app.protocol("WM_DELETE_WINDOW", save_and_destroy)
 app.mainloop()
