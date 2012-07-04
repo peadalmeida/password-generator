@@ -32,7 +32,7 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
 2. Navegue até a pasta com conteúdo clonado
 3. Abra um terminal nesta pasta
 
-        `$python3 controle.py`
+`$python3 controle.py`
 
 ----
 ###FAQ:
