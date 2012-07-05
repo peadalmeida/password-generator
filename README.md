@@ -32,7 +32,7 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
 2. Navegue até a pasta com conteúdo clonado
 3. Abra um terminal nesta pasta
 
-    $python3 controle.py
+    `$python3 controle.py`
 
 ----
 ###FAQ:
@@ -61,3 +61,23 @@ R:Certifique que  o arquivo modificado não contenha linhas em branco ao final.
 ####4.Reiniciei sistema mas senhas ficaram salvas.
 
 R:Apague arquivo senhas_antigas.txt e crie um novo vazio.
+
+####5.Interface gráfica avisa erro no momento de carregar.
+
+R:Verifique a presença dos módulos:
+
+* password_generator.py
+* new_io.py
+
+A presença dos arquivos:
+
+* sub_mas.txt
+* sub_fem.txt
+* adj_mas.txt
+* adj_fem.txt
+* senhas_antigas.txt
+
+e das imagens:
+
+* senha.gif
+* sair.gif
