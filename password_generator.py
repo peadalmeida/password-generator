@@ -10,11 +10,11 @@ import new_io as nio
     Em caso de falha o aplicativo é abortado.
 '''
 try:
-    lista_sub_fem = nio.extrai_conteudo('sub_fem.txt')
-    lista_sub_mas = nio.extrai_conteudo('sub_mas.txt')
-    lista_adj_mas = nio.extrai_conteudo('adj_mas.txt')
-    lista_adj_fem = nio.extrai_conteudo('adj_fem.txt')
-    senhas_antigas = nio.extrai_conteudo('senhas_antigas.txt')
+    lista_sub_fem = nio.extrai_conteudo('arqs/sub_fem.txt')
+    lista_sub_mas = nio.extrai_conteudo('arqs/sub_mas.txt')
+    lista_adj_mas = nio.extrai_conteudo('arqs/adj_mas.txt')
+    lista_adj_fem = nio.extrai_conteudo('arqs/adj_fem.txt')
+    senhas_antigas = nio.extrai_conteudo('arqs/senhas_antigas.txt')
 except Exception as exc:
     showwarning('Error!', exc)
     sys.exit(1)
@@ -72,18 +72,18 @@ def nova_senha():
 
 def save_and_destroy():
     '''salva senhas antigas antes de destruir a aplicação'''
-    nio.grava_conteudo(senhas_antigas, 'senhas_antigas.txt')
+    nio.grava_conteudo(senhas_antigas, 'arqs/senhas_antigas.txt')
     app.destroy()
 
 '''
 Dois botoes, um para gerar a senha e um outro para sair do aplicativo.
 '''
-img_senha = PhotoImage(file='senha.gif')
+img_senha = PhotoImage(file='imgs/senha.gif')
 gera = Button(app, text="Gerar!", command=nova_senha,
         image=img_senha, compound='left')
 gera.pack(side='left', padx=10, pady=10)
 
-img_sair = PhotoImage(file='sair.gif')
+img_sair = PhotoImage(file='imgs/sair.gif')
 sair = Button(app, text="Sair", command=save_and_destroy,
         image=img_sair, compound='left')
 sair.pack(side='right', padx=10, pady=10)
