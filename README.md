@@ -1,7 +1,7 @@
 Password-Generator
 ==================
 
-<b>Trabalho de Linguagens de Programação I -
+<b>Trabalho de Linguagens de Programação I </b>
 
 Implementar um programa em Python que gere senhas aleatorias e faceis de memorizar utilizando substantivos, adjetivos e numeros
 de, no maximo, 3 (três) digitos(0 a 100).
@@ -32,7 +32,7 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
 2. Navegue até a pasta com conteúdo clonado
 3. Abra um terminal nesta pasta
 
-`$python3 controle.py`
+    $python3 controle.py
 
 ----
 ###FAQ:

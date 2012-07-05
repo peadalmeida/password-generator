@@ -49,12 +49,12 @@ e as devidas dimensões
 app = Tk()
 app.title("Gerador de Senhas")
 app.geometry('500x100+300+100')
-
+app['background']='#333'
 '''
 Inicializaçao do texto onde será exibida a senha.
 '''
 senha = StringVar()
-Label(app, textvariable=senha, font=("Helvetica", 30), background='black',
+Label(app, textvariable=senha, font=("Helvetica", 30), background='#333',
         foreground='green').pack()
 senha.set("Senha gerada aqui")
 
@@ -78,10 +78,14 @@ def save_and_destroy():
 '''
 Dois botoes, um para gerar a senha e um outro para sair do aplicativo.
 '''
-gera = Button(app, text="Gerar!", width=10, command=nova_senha)
+img_senha = PhotoImage(file='senha.gif')
+gera = Button(app, text="Gerar!", command=nova_senha,
+        image=img_senha, compound='left')
 gera.pack(side='left', padx=10, pady=10)
 
-sair = Button(app, text="Sair", width=10, command=save_and_destroy)
+img_sair = PhotoImage(file='sair.gif')
+sair = Button(app, text="Sair", command=save_and_destroy,
+        image=img_sair, compound='left')
 sair.pack(side='right', padx=10, pady=10)
 
 app.protocol("WM_DELETE_WINDOW", save_and_destroy)
