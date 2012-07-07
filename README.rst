@@ -31,15 +31,15 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
 
 1. Clone o repositório 
 
-`git clone git@github.com:augustopedro/Password-Generator.git`
+``git clone git@github.com:augustopedro/Password-Generator.git``
     
 2. Navegue até a pasta com conteúdo clonado
     
-`cd Password-Generator/`
+``cd Password-Generator/``
     
-3. Abra um terminal nesta pasta
+3. Digite  o comando
 
-`$python3 controle.py`
+``python3 controle.py``
 
 ----
 
