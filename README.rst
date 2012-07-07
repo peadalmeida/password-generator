@@ -37,7 +37,7 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
     
 ``cd Password-Generator/``
     
-3. Digite  o comando
+3. Inicie o aplicativo
 
 ``python3 controle.py``
 
@@ -47,7 +47,7 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
 
 1. *Programa abre,exibe erro e fecha.*
 
-   R:Certifique de os arquivos listados abaixo estejam na pasta atual e com permissão de leitura.
+    R:Certifique de os arquivos listados abaixo estejam na pasta atual e com permissão de leitura.
 
 * sub_mas.txt
 * sub_fem.txt
@@ -57,7 +57,7 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
 
 2. *Programa não executa.*
 
-   R:Certifique de que todos os pré-requisitos estejam satisfeitos.Verifique se os arquivos abaixo estejam presentes.
+    R:Certifique de que todos os pré-requisitos estejam satisfeitos.Verifique se os arquivos abaixo estejam presentes.
 
 * password_generator.py
 * new_io.py
