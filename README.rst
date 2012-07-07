@@ -41,9 +41,8 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
 
 ``python3 controle.py``
 
+FAQ:
 ----
-
-**FAQ:**
 
 1. *Programa abre,exibe erro e fecha.*
 
