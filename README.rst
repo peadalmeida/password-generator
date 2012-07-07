@@ -21,10 +21,10 @@ As senhas geradas são únicas e para facilitar memorização, o adjetivo concor
 
 **Professor:** Bruno de Oliveira Schneider
 
-**Requisitos:**
+**Dependencias:**
 
-* Python 3
-* Tkinter
+* Python 3 (``sudo apt-get install python3``) 
+* Tkinter (``sudo apt-get install python3-tk``)
 
 
 **Como utilizar:**
