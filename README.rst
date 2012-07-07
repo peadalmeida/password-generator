@@ -5,7 +5,7 @@ Trabalho de Linguagens de Programação I
 ---------------------------------------
 
 Implementar um programa em Python que gera senhas aleatórias e fáceis de
-memorizar utilizando substantivos, adjetivos e númerosde, no maximo, 3 (três) 
+memorizar utilizando substantivos, adjetivos e números de, no maximo, 3 (três) 
 digitos(0 a 100).
 As senhas possuem tamanho fixo de 13 caracteres formatadas no seguinte padrão.
 
@@ -70,7 +70,7 @@ FAQ:
 * new_io.py
 
 
-3. *Adiconei novo adjetivo\substantivo e programa começou aparecer senha vazia
+3. *Adiconei novo adjetivo/substantivo e programa começou aparecer senha vazia
    esporadicamente.*
 
     R:Certifique que  o arquivo modificado não contenha linhas em branco 
