@@ -14,7 +14,7 @@ try:
     lista_sub_mas = nio.extrai_conteudo('arqs/sub_mas.txt')
     lista_adj_mas = nio.extrai_conteudo('arqs/adj_mas.txt')
     lista_adj_fem = nio.extrai_conteudo('arqs/adj_fem.txt')
-    senhas_antigas = nio.extrai_conteudo('arqs/senhas_antigas.txt')
+    senhas_antigas  = nio.extrai_conteudo('arqs/senhas_antigas.txt')
 except Exception as exc:
     showwarning('Error!', exc)
     sys.exit(1)
@@ -54,6 +54,7 @@ app['background']='#333'
 Inicializaçao do texto onde será exibida a senha.
 '''
 senha = StringVar()
+buffer_senhas = []
 Label(app, textvariable=senha, font=("Helvetica", 30), background='#333',
         foreground='green').pack()
 senha.set("Senha gerada aqui")
@@ -64,15 +65,15 @@ def nova_senha():
     Alteração do valor exibido com nova senha randômica.
     '''
     nova_senha = gera_senha()
-    while nova_senha in senhas_antigas:
+    while nova_senha in senhas_antigas or nova_senha in buffer_senhas:
         nova_senha = gera_senha()
     senha.set(nova_senha)
-    senhas_antigas.append(nova_senha)
+    buffer_senhas.append(nova_senha)
 
 
 def save_and_destroy():
     '''salva senhas antigas antes de destruir a aplicação'''
-    nio.grava_conteudo(senhas_antigas, 'arqs/senhas_antigas.txt')
+    nio.grava_conteudo(buffer_senhas, 'arqs/senhas_antigas.txt')
     app.destroy()
 
 '''

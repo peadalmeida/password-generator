@@ -17,3 +17,4 @@ def grava_conteudo(lista, nome_arq):
     '''Grava conteúdo de uma lista em um arquivo de nome nome_arq.'''
     with open(nome_arq, 'a') as arq:
         arq.write('\n'.join(lista))
+        arq.write('\n')
