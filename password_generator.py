@@ -35,12 +35,12 @@ def gera_senha():
     genero = random.choice(['m', 'f'])
     if genero == 'm':
         return random.choice(lista_sub_mas) + \
-                random.choice(lista_adj_mas) + \
-                '{:03}'.format(random.choice(range(101)))
+            random.choice(lista_adj_mas) + \
+            '{:03}'.format(random.choice(range(101)))
     else:
         return random.choice(lista_sub_fem) + \
-                random.choice(lista_adj_fem) + \
-                '{:03}'.format(random.choice(range(101)))
+            random.choice(lista_adj_fem) + \
+            '{:03}'.format(random.choice(range(101)))
 
 '''
 Cria-se uma janela com o titulo "Gerador de Senhas"
@@ -49,14 +49,14 @@ e as devidas dimensões
 app = Tk()
 app.title("Gerador de Senhas")
 app.geometry('500x100+300+100')
-app['background']='#333'
+app['background'] = '#333'
 '''
 Inicializaçao do texto onde será exibida a senha.
 '''
 senha = StringVar()
 buffer_senhas = []
-Label(app, textvariable=senha, font=("Helvetica", 30), background='#333',
-        foreground='green').pack()
+Label(app, textvariable=senha, font=("Helvetica", 30),
+        background='#333',foreground='green').pack()
 senha.set("Senha gerada aqui")
 
 
@@ -81,12 +81,12 @@ Dois botoes, um para gerar a senha e um outro para sair do aplicativo.
 '''
 img_senha = PhotoImage(file='imgs/senha.gif')
 gera = Button(app, text="Gerar!", command=nova_senha,
-        image=img_senha, compound='left')
+                        image=img_senha, compound='left')
 gera.pack(side='left', padx=10, pady=10)
 
 img_sair = PhotoImage(file='imgs/sair.gif')
 sair = Button(app, text="Sair", command=save_and_destroy,
-        image=img_sair, compound='left')
+                        image=img_sair, compound='left')
 sair.pack(side='right', padx=10, pady=10)
 
 app.protocol("WM_DELETE_WINDOW", save_and_destroy)
