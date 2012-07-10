@@ -54,6 +54,7 @@ app['background']='#333'
 Inicializaçao do texto onde será exibida a senha.
 '''
 senha = StringVar()
+buffer_senhas = []
 Label(app, textvariable=senha, font=("Helvetica", 30), background='#333',
         foreground='green').pack()
 senha.set("Senha gerada aqui")
@@ -64,15 +65,15 @@ def nova_senha():
     Alteração do valor exibido com nova senha randômica.
     '''
     nova_senha = gera_senha()
-    while nova_senha in senhas_antigas:
+    while nova_senha in senhas_antigas or nova_senha in buffer_senhas:
         nova_senha = gera_senha()
     senha.set(nova_senha)
-    senhas_antigas.append(nova_senha)
+    buffer_senhas.append(nova_senha)
 
 
 def save_and_destroy():
     '''salva senhas antigas antes de destruir a aplicação'''
-    nio.grava_conteudo(senhas_antigas, 'arqs/senhas_antigas.txt')
+    nio.grava_conteudo(buffer_senhas, 'arqs/senhas_antigas.txt')
     app.destroy()
 
 '''
