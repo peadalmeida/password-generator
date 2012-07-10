@@ -8,8 +8,8 @@ def extrai_conteudo(nome_arq):
     '''Abre um arquivo de nome nome_arq e retorna uma lista com as linhas do
     arquivo sem a quebra de linha(\\n) .'''
     lista = []
-    with open(nome_arq, 'r') as arq:
-        lista = arq.read().strip().split('\n')
+    with open(nome_arq) as arq:
+        lista = arq.read().split('\n')
     return lista
 
 

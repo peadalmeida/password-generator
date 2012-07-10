@@ -14,7 +14,7 @@ try:
     lista_sub_mas = nio.extrai_conteudo('arqs/sub_mas.txt')
     lista_adj_mas = nio.extrai_conteudo('arqs/adj_mas.txt')
     lista_adj_fem = nio.extrai_conteudo('arqs/adj_fem.txt')
-    senhas_antigas  = nio.extrai_conteudo('arqs/senhas_antigas.txt')
+    senhas_antigas = nio.extrai_conteudo('arqs/senhas_antigas.txt')
 except Exception as exc:
     showwarning('Error!', exc)
     sys.exit(1)
