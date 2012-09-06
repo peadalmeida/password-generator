@@ -19,7 +19,7 @@ em gênero com o substantivo.
 * Pedro Augusto
 
 ##Professor: 
-    Bruno de Oliveira Schneider
+Bruno de Oliveira Schneider
 
 ##Dependências:
 
