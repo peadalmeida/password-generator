@@ -30,15 +30,15 @@ em gênero com o substantivo.
 
 1. Clone o repositório 
 
-`git clone git@github.com:augustopedro/Password-Generator.git`
+    `git clone git@github.com:augustopedro/Password-Generator.git`
     
 2. Navegue até a pasta com conteúdo clonado
-    
-`cd Password-Generator/`
-    
-3. Inicie o aplicativo
 
-`python3 password_generator.py`
+    `cd Password-Generator/`
+    
+3. Inicie o aplicativo  
+
+    `python3 password_generator.py`
 
 ###FAQ:
 
@@ -48,11 +48,11 @@ em gênero com o substantivo.
     e com permissão de leitura.A pasta arqs deve estar na mesma pasta
     do arquivo password_generator.py 
 
-* sub_mas.txt
-* sub_fem.txt
-* adj_mas.txt
-* adj_fem.txt
-* senhas_antigas.txt
+    * sub_mas.txt
+    * sub_fem.txt
+    * adj_mas.txt
+    * adj_fem.txt
+    * senhas_antigas.txt
 
 2. *Programa não executa e exibe a seguinte mensagem 
    "ImportError: No module named new_io".*
@@ -61,8 +61,8 @@ em gênero com o substantivo.
     E verifique a presença em mesma pasta dos arquivos abaixo 
     assim como pasta arqs e imgs.
 
-* password_generator.py
-* new_io.py
+    * password_generator.py
+    * new_io.py
 
 
 3. *Adiconei novo adjetivo/substantivo e programa começou aparecer senha vazia
@@ -81,18 +81,18 @@ em gênero com o substantivo.
 
     R:Verifique a presença dos módulos:
 
-* password_generator.py
-* new_io.py
+    * password_generator.py
+    * new_io.py
 
     A presença dos arquivos(pasta arqs):
 
-* sub_mas.txt
-* sub_fem.txt
-* adj_mas.txt
-* adj_fem.txt
-* senhas_antigas.txt
+    * sub_mas.txt
+    * sub_fem.txt
+    * adj_mas.txt
+    * adj_fem.txt
+    * senhas_antigas.txt
 
     e das imagens(pasta imgs):
 
-* senha.gif
-* sair.gif
+    * senha.gif
+    * sair.gif
