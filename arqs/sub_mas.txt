@@ -1,5 +1,5 @@
-﻿genio
 idolo
+genio
 vidro
 lapis
 carro
