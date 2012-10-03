@@ -1,7 +1,7 @@
 from tkinter import Tk, StringVar, Button, PhotoImage, Label
 from tkinter.messagebox import showwarning
 from random import choice
-from  sys import exit
+from sys import exit
 
 
 def extrai_conteudo(caminho_arquivo):
@@ -15,7 +15,6 @@ def extrai_conteudo(caminho_arquivo):
     em que módulo é importado.
     Em caso de falha o aplicativo é abortado.
 '''
-
 try:
     lista_sub_fem = extrai_conteudo('arqs/sub_fem.txt')
     lista_sub_mas = extrai_conteudo('arqs/sub_mas.txt')
@@ -48,22 +47,6 @@ def gera_senha():
             choice(lista_adj_fem) + \
             '{:03}'.format(choice(range(101)))
 
-'''
-Cria-se uma janela com o titulo "Gerador de Senhas"
-e as devidas dimensões
-'''
-app = Tk()
-app.title("Gerador de Senhas")
-app.geometry('500x100+300+100')
-app['background'] = '#333'
-'''
-Inicializaçao do texto onde será exibida a senha.
-'''
-senha = StringVar()
-Label(app, textvariable=senha, font=("Helvetica", 30),
-        background='#333', foreground='green').pack()
-senha.set("Senha gerada aqui")
-
 
 def nova_senha():
     '''
@@ -71,18 +54,35 @@ def nova_senha():
     '''
     senha.set(gera_senha())
 
-'''
-Dois botões, um para gerar a senha e um outro para sair do aplicativo.
-'''
-img_senha = PhotoImage(file='imgs/senha.gif')
-gera = Button(app, text="Gerar!", command=nova_senha,
+if __name__ == '__main__':
+    '''
+    Cria-se uma janela com o titulo "Gerador de Senhas"
+    e as devidas dimensões
+    '''
+    app = Tk()
+    app.title("Gerador de Senhas")
+    app.geometry('500x100+300+100')
+    '''Desativa redimensionamento da tela'''
+    app.resizable(0, 0)
+    app['background'] = '#333'
+    '''
+    Inicializaçao do texto onde será exibida a senha.
+    '''
+    senha = StringVar()
+    Label(app, textvariable=senha, font=("Helvetica", 30),
+        background='#333', foreground='green').pack()
+    senha.set("Senha gerada aqui")
+    '''
+    Dois botões, um para gerar a senha e um outro para sair do aplicativo.
+    '''
+    img_senha = PhotoImage(file='imgs/senha.gif')
+    gera = Button(app, text="Gerar!", command=nova_senha,
                         image=img_senha, compound='left')
-gera.pack(side='left', padx=10, pady=10)
+    gera.pack(side='left', padx=10, pady=10)
 
-img_sair = PhotoImage(file='imgs/sair.gif')
-sair = Button(app, text="Sair", command=app.quit,
+    img_sair = PhotoImage(file='imgs/sair.gif')
+    sair = Button(app, text="Sair", command=app.quit,
                         image=img_sair, compound='left')
-sair.pack(side='right', padx=10, pady=10)
-
-'''Inicia loop de eventos'''
-app.mainloop()
+    sair.pack(side='right', padx=10, pady=10)
+    '''Inicia loop de eventos'''
+    app.mainloop()
