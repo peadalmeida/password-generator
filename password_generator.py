@@ -48,6 +48,11 @@ def gera_senha():
             '{:03}'.format(choice(range(101)))
 
 
+def multiplas_senhas(num_senhas):
+    '''Gera uma lista de senhas com num_senhas elementos.'''
+    return [gera_senha() for _ in range(1, num_senhas + 1)]
+
+
 def nova_senha():
     '''
     Alteração do valor exibido com nova senha randômica.
