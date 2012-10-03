@@ -8,7 +8,7 @@ def extrai_conteudo(caminho_arquivo):
     '''Extrai conteudo de arquivo cujo caminho é passado.
     O retorno da função é uma lista com todas as linhas do arquivo'''
     with open(caminho_arquivo) as arq:
-        lista = arq.read().split('\n')
+        lista = arq.read().strip().split('\n')
     return lista
 
 '''Carrega substantivos e adjetivos oriundos de arquivos no momento
