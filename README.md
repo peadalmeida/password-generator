@@ -15,7 +15,7 @@ em gênero com o substantivo.
 ##Grupo:
 
 * Cássio Botaro
-* Mônica Faria
+* Mônica Faria (contribuição)
 * Pedro Augusto
 
 ##Professor: 
@@ -45,54 +45,25 @@ Bruno de Oliveira Schneider
 
 1 **Programa abre,exibe erro e fecha.**
 
-    R:Certifique de os arquivos listados abaixo estejam na pasta `arqs`
+    R:Certifique que os arquivos listados abaixo estejam na pasta `arqs`
     e com permissão de leitura.A pasta arqs deve estar na mesma pasta
     do arquivo password_generator.py 
+    Certifique também se as dependências estão satisfeitas.
 
 * sub_mas.txt
 * sub_fem.txt
 * adj_mas.txt
 * adj_fem.txt
-* senhas_antigas.txt
 
-2 **Programa não executa e exibe a seguinte mensagem "ImportError: No module named new_io".**
-
-    R:Certifique de que todos as dependências estejam satisfeitas.
-    E verifique a presença em mesma pasta dos arquivos abaixo 
-    assim como pasta arqs e imgs.
-
-* password_generator.py
-* new_io.py
-
-
-3 **Adiconei novo adjetivo/substantivo e programa começou aparecer senha vazia
+2 **Adiconei novo adjetivo/substantivo e programa começou aparecer senha vazia
    esporadicamente.**
 
     R:Certifique que  o arquivo modificado não contenha linhas em branco 
     ao final.
 
-4 **Reiniciei sistema mas senhas ficaram salvas.**
+3 **Programa não abre, e exibe erro dizendo não poder abrir arquivo de imagem**
 
-    R:O aplicativo salva todas as senhas geradas para evitar repetição.
-    Caso deseje reiniciar totalmente o sistema, apague o arquivo 
-    senhas_antigas.txt na pasta arqs e crie um novo vazio.
+    R:Verifique a presença dos seguintes arquivos na pasta `imgs`:
 
-5 **Interface gráfica avisa erro no momento de carregar.**
-
-    R:Verifique a presença dos módulos:
-
-* password_generator.py
-* new_io.py
-
-    A presença dos arquivos(pasta arqs):
-
-* sub_mas.txt
-* sub_fem.txt
-* adj_mas.txt
-* adj_fem.txt
-* senhas_antigas.txt
-
-    e das imagens(pasta imgs):
-
-* senha.gif
 * sair.gif
+* senha.gif
