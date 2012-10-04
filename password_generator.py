@@ -50,7 +50,7 @@ def gera_senha():
 
 def multiplas_senhas(num_senhas):
     '''Gera uma lista de senhas com num_senhas elementos.'''
-    return [gera_senha() for _ in range(1, num_senhas + 1)]
+    return [gera_senha() for _ in range(num_senhas)]
 
 
 def nova_senha():
