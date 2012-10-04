@@ -47,7 +47,7 @@ Bruno de Oliveira Schneider
 
     R:Certifique que os arquivos listados abaixo estejam na pasta `arqs`
     e com permissão de leitura.A pasta arqs deve estar na mesma pasta
-    do arquivo password_generator.py 
+    do arquivo password_generator.py.
     Certifique também se as dependências estão satisfeitas.
 
 * sub_mas.txt
@@ -61,7 +61,7 @@ Bruno de Oliveira Schneider
     R:Certifique que  o arquivo modificado não contenha linhas em branco 
     ao final.
 
-3 **Programa não abre, e exibe erro dizendo não poder abrir arquivo de imagem**
+3 **Programa não abre, e exibe erro dizendo não poder abrir arquivo de imagem.**
 
     R:Verifique a presença dos seguintes arquivos na pasta `imgs`:
 
