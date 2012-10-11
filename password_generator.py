@@ -1,3 +1,5 @@
+#-*-coding:utf:8 -*-
+
 from tkinter import Tk, StringVar, Button, PhotoImage, Label
 from tkinter.messagebox import showwarning
 from random import choice
@@ -37,7 +39,7 @@ def gera_senha():
            homemgordo084
 
     '''
-    genero = choice(['m', 'f'])
+    genero = choice(('m', 'f'))
     if genero == 'm':
         return choice(lista_sub_mas) + \
             choice(lista_adj_mas) + \
@@ -48,22 +50,22 @@ def gera_senha():
             '{:03}'.format(choice(range(101)))
 
 
-def multiplas_senhas(num_senhas):
+def multiplas_senhas(num_senhas=10):
     '''Gera uma lista de senhas com num_senhas elementos.'''
     return [gera_senha() for _ in range(num_senhas)]
-
-
-def nova_senha():
-    '''
-    Alteração do valor exibido com nova senha randômica.
-    '''
-    senha.set(gera_senha())
 
 if __name__ == '__main__':
     '''
     Cria-se uma janela com o titulo "Gerador de Senhas"
     e as devidas dimensões
     '''
+
+    def nova_senha():
+        '''
+        Alteração do valor exibido com nova senha randômica.
+        '''
+        senha.set(gera_senha())
+
     app = Tk()
     app.title("Gerador de Senhas")
     app.geometry('500x100+300+100')
