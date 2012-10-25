@@ -1,21 +1,22 @@
+#-*-coding:utf:8 -*-
+
 from tkinter import Tk, StringVar, Button, PhotoImage, Label
 from tkinter.messagebox import showwarning
 from random import choice
-from  sys import exit
+from sys import exit
 
 
 def extrai_conteudo(caminho_arquivo):
     '''Extrai conteudo de arquivo cujo caminho é passado.
     O retorno da função é uma lista com todas as linhas do arquivo'''
     with open(caminho_arquivo) as arq:
-        lista = arq.read().split('\n')
+        lista = arq.read().strip().split('\n')
     return lista
 
 '''Carrega substantivos e adjetivos oriundos de arquivos no momento
     em que módulo é importado.
     Em caso de falha o aplicativo é abortado.
 '''
-
 try:
     lista_sub_fem = extrai_conteudo('arqs/sub_fem.txt')
     lista_sub_mas = extrai_conteudo('arqs/sub_mas.txt')
@@ -38,7 +39,7 @@ def gera_senha():
            homemgordo084
 
     '''
-    genero = choice(['m', 'f'])
+    genero = choice(('m', 'f'))
     if genero == 'm':
         return choice(lista_sub_mas) + \
             choice(lista_adj_mas) + \
@@ -48,41 +49,47 @@ def gera_senha():
             choice(lista_adj_fem) + \
             '{:03}'.format(choice(range(101)))
 
-'''
-Cria-se uma janela com o titulo "Gerador de Senhas"
-e as devidas dimensões
-'''
-app = Tk()
-app.title("Gerador de Senhas")
-app.geometry('500x100+300+100')
-app['background'] = '#333'
-'''
-Inicializaçao do texto onde será exibida a senha.
-'''
-senha = StringVar()
-Label(app, textvariable=senha, font=("Helvetica", 30),
+
+def multiplas_senhas(num_senhas=10):
+    '''Gera uma lista de senhas com num_senhas elementos.'''
+    return [gera_senha() for _ in range(num_senhas)]
+
+if __name__ == '__main__':
+    '''
+    Cria-se uma janela com o titulo "Gerador de Senhas"
+    e as devidas dimensões
+    '''
+
+    def nova_senha():
+        '''
+        Alteração do valor exibido com nova senha randômica.
+        '''
+        senha.set(gera_senha())
+
+    app = Tk()
+    app.title("Gerador de Senhas")
+    app.geometry('500x100+300+100')
+    '''Desativa redimensionamento da tela'''
+    app.resizable(0, 0)
+    app['background'] = '#333'
+    '''
+    Inicializaçao do texto onde será exibida a senha.
+    '''
+    senha = StringVar()
+    Label(app, textvariable=senha, font=("Helvetica", 30),
         background='#333', foreground='green').pack()
-senha.set("Senha gerada aqui")
-
-
-def nova_senha():
+    senha.set("Senha gerada aqui")
     '''
-    Alteração do valor exibido com nova senha randômica.
+    Dois botões, um para gerar a senha e um outro para sair do aplicativo.
     '''
-    senha.set(gera_senha())
-
-'''
-Dois botões, um para gerar a senha e um outro para sair do aplicativo.
-'''
-img_senha = PhotoImage(file='imgs/senha.gif')
-gera = Button(app, text="Gerar!", command=nova_senha,
+    img_senha = PhotoImage(file='imgs/senha.gif')
+    gera = Button(app, text="Gerar!", command=nova_senha,
                         image=img_senha, compound='left')
-gera.pack(side='left', padx=10, pady=10)
+    gera.pack(side='left', padx=10, pady=10)
 
-img_sair = PhotoImage(file='imgs/sair.gif')
-sair = Button(app, text="Sair", command=app.quit,
+    img_sair = PhotoImage(file='imgs/sair.gif')
+    sair = Button(app, text="Sair", command=app.quit,
                         image=img_sair, compound='left')
-sair.pack(side='right', padx=10, pady=10)
-
-'''Inicia loop de eventos'''
-app.mainloop()
+    sair.pack(side='right', padx=10, pady=10)
+    '''Inicia loop de eventos'''
+    app.mainloop()
