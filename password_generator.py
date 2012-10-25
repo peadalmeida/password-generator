@@ -55,10 +55,6 @@ def gerar_multiplas_senhas(num_senhas=10):
     return [gerar_senha() for _ in range(num_senhas)]
 
 if __name__ == '__main__':
-    '''
-    Cria-se uma janela com o titulo "Gerador de Senhas"
-    e as devidas dimensões
-    '''
 
     def modificar_senha():
         '''
@@ -66,11 +62,14 @@ if __name__ == '__main__':
         '''
         senha.set(gerar_senha())
 
+    '''Inicialização da tela  com dimensionamento, definição de cor e
+       outras características.'''
     app = Tk()
     app.title("Gerador de Senhas")
-    app.geometry('500x100+300+100')
+    app.geometry('500x100')
     '''Desativa redimensionamento da tela'''
     app.resizable(0, 0)
+    #defina a cor do fundo de tela como preto.
     app['background'] = '#333'
     '''
     Inicializaçao do texto onde será exibida a senha.
