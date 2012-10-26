@@ -22,6 +22,9 @@ try:
     lista_sub_mas = extrair_conteudo('arqs/sub_mas.txt')
     lista_adj_mas = extrair_conteudo('arqs/adj_mas.txt')
     lista_adj_fem = extrair_conteudo('arqs/adj_fem.txt')
+except IOError as exc:
+    showwarning('Error!', 'Erro de arquivo:' + str(exc))
+    exit(1)
 except Exception as exc:
     showwarning('Error!', exc)
     exit(1)
@@ -69,7 +72,6 @@ if __name__ == '__main__':
     app.geometry('500x100')
     '''Desativa redimensionamento da tela'''
     app.resizable(0, 0)
-    #defina a cor do fundo de tela como preto.
     app['background'] = '#333'
     '''
     Inicializaçao do texto onde será exibida a senha.
