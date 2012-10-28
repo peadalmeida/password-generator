@@ -1,4 +1,9 @@
 #-*-coding:utf:8 -*-
+#Tabalho de Linguagens de Programação I
+#Professor : Bruno Schneider
+#
+#Alunos: Cássio Botaro, Pedro Augusto Almeida
+#Turma: 10 A
 
 from tkinter import Tk, StringVar, Button, PhotoImage, Label
 from tkinter.messagebox import showwarning
